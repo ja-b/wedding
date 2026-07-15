@@ -6,7 +6,7 @@
   --ink-soft:   #5a534a;
   --gold:       #b0895a;
   --gold-soft:  #c9ad86;
-  --rule:       #d8cdb8;
+  --rule:       #d2c6ab;
 
   /* Event accents */
   --dusk:   #6b4f6b;   /* shrine — dusk in the city */
@@ -123,8 +123,8 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 }
 .hero__names .amp { display: block; font-style: italic; font-size: 0.5em; color: var(--gold-soft); margin: 0.15em 0; }
 .hero__meta {
-  margin-top: 1.75rem;
-  display: flex; gap: clamp(1rem, 4vw, 2.5rem); flex-wrap: wrap; justify-content: center;
+  margin-top: 1.25rem;
+  display: flex; gap: clamp(1rem, 3vw, 1.85rem); flex-wrap: wrap; justify-content: center;
   font-family: "Cormorant Garamond", serif; font-size: clamp(1.05rem, 2.5vw, 1.4rem);
   letter-spacing: 0.02em;
 }
@@ -279,7 +279,7 @@ footer {
 /* highlighted callout box (Chacone, gifts) */
 .feature {
   margin-top: 2rem; padding: clamp(1.5rem, 4vw, 2.25rem);
-  background: var(--cream); border: 1px solid var(--gold-soft); border-left: 3px solid var(--gold);
+  background: var(--cream-deep); border: 1px solid var(--rule); border-left: 2px solid var(--gold);
 }
 .band--alt .feature { background: var(--cream); }
 .feature h3 { font-size: 1.6rem; margin-bottom: 0.5rem; }
@@ -300,6 +300,37 @@ footer {
 .spotlight .role { font-style: italic; color: var(--dusk); margin-bottom: 0.35rem; }
 .spotlight h3 { font-size: 1.7rem; margin-bottom: 0.5rem; }
 
+/* ============ Decorative SVG motifs & hero photos ============ */
+.motif { display: block; }
+
+/* Hero atmospheric photos — sit behind the colour tint and dark wash */
+.hero__panel { overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
+.hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero__panel::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.hero__panel--dusk::after   { background: linear-gradient(180deg, rgba(53,48,74,0.58), rgba(125,90,95,0.55)); }
+.hero__panel--forest::after { background: linear-gradient(180deg, rgba(95,115,85,0.46), rgba(63,77,56,0.64)); }
+.hero__panel--forest .hero__photo { object-position: center 38%; }
+
+/* Feather the seam so the two panels read as one atmospheric field */
+.hero__panels::before {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background: linear-gradient(90deg, transparent 41%, rgba(56,48,62,0.34) 50%, transparent 59%);
+}
+
+/* Small motif beside each event-card index label */
+.event__index { display: flex; align-items: center; gap: 0.55rem; }
+.event__index .motif { width: 24px; height: auto; flex: 0 0 auto; }
+.event--dusk   .event__index .motif { color: var(--dusk); }
+.event--forest .event__index .motif { color: var(--forest); }
+
+/* Botanical divider (footers) */
+.motif--divider { width: 200px; height: 20px; margin: 0 0 1.75rem; color: var(--gold); }
+.motif--divider.center { margin-inline: auto; }
+
+/* Optional slots for the couple's own venue photos */
+.event__media { margin: 0 0 1.25rem; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--rule); }
+.event__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* ============ Responsive ============ */
 @media (max-width: 900px) {
   .onward { grid-template-columns: repeat(2, 1fr); }
@@ -307,9 +338,25 @@ footer {
 @media (max-width: 760px) {
   .events, .cols { grid-template-columns: 1fr; }
   .onward { grid-template-columns: 1fr; }
-  .hero__panels { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .hero__panels { grid-template-columns: 1fr; grid-template-rows: 1.3fr 0.7fr; }
+  .hero__panels::before { background: linear-gradient(180deg, transparent 44%, rgba(56,48,62,0.32) 52%, transparent 62%); }
   .tl-row { grid-template-columns: 1fr; gap: 0.5rem; }
   .tl-when { padding-bottom: 0.25rem; }
+  .topbar { flex-wrap: wrap; gap: 0.3rem 1rem; }
+  .topbar a, .footer__links a { display: inline-block; padding-block: 6px; }
+  .place-title { flex-wrap: wrap; }
+}
+
+@media (max-width: 560px) {
+  ul.clean li { padding: 0.85rem 0; }
+  ul.clean li a { display: inline-block; padding-block: 2px; }
+  dl.details { grid-template-columns: 1fr; gap: 0; }
+  dl.details dt { margin-top: 0.9rem; }
+  dl.details dt:first-child { margin-top: 0; }
+  dl.details dd { margin-bottom: 0.2rem; overflow-wrap: anywhere; }
+  .event, .spotlight, .feature { padding: 1.5rem; }
+  .spotlight h3, .feature h3 { font-size: 1.4rem; }
+  .event__when { font-size: 1.25rem; }
 }
 
 /* Respect reduced motion */

@@ -22,8 +22,16 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="hero__panels" aria-hidden="true">
-      <div class="hero__panel hero__panel--dusk"></div>
-      <div class="hero__panel hero__panel--forest"></div>
+      <div class="hero__panel hero__panel--dusk">
+        <!-- Atmospheric mood image. When you have your OWN photo of Nogi-jinja at dusk,
+             swap the src below for e.g. src="images/nogi-dusk.jpg" -->
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1549124151-844d2a02fe9a?q=70&amp;w=1600&amp;auto=format&amp;fit=crop" alt="" loading="eager" />
+      </div>
+      <div class="hero__panel hero__panel--forest">
+        <!-- Atmospheric mood image. Swap for your OWN Karuizawa photo when you have one,
+             e.g. src="images/karuizawa-forest.jpg" -->
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1444724334165-e7050f2229a1?q=70&amp;w=1600&amp;auto=format&amp;fit=crop" alt="" loading="eager" />
+      </div>
     </div>
 
     <div class="hero__content">
@@ -35,7 +43,7 @@
       </div>
     </div>
 
-    <div class="hero__scroll">Two days, two celebrations — here's everything you'll need</div>
+    <div class="hero__scroll">Two celebrations, a couple of days apart — everything you'll need is below</div>
   </header>
 
   <!-- ============ THE CEREMONIES ============ -->
@@ -49,11 +57,13 @@
       <div class="events">
         <!-- Event 1 -->
         <article class="event event--dusk">
-          <p class="event__index">The first day</p>
+          <p class="event__index"><svg class="motif" viewBox="0 0 200 180" aria-hidden="true"><g fill="currentColor"><polygon points="60,52 69,52 65,170 56,170"/><polygon points="140,52 131,52 135,170 144,170"/><polygon points="42,74 158,74 158,84 42,84"/><rect x="96" y="60" width="8" height="15"/><path d="M32,55 Q100,66 168,55 L168,62 Q100,73 32,62 Z"/><path d="M18,34 Q100,52 182,34 L182,44 Q100,62 18,44 Z"/></g></svg>The first day</p>
           <h3 class="event__name">Nogi&#8209;jinja Shrine</h3>
-          <p class="event__theme">A traditional Shinto ceremony — an oasis in the city, at dusk.</p>
+          <!-- Add your own photo of the shrine here later:
+          <div class="event__media"><img src="images/nogi-jinja.jpg" alt="Nogi-jinja shrine" /></div> -->
+          <p class="event__theme">A traditional Shinto ceremony — a quiet corner of the city, at dusk.</p>
 
-          <p class="event__when"><strong>Thursday, 12 November 2026</strong><br />Ceremony at 4:00 pm</p>
+          <p class="event__when"><strong>Thursday, 12 November 2026</strong><br />Ceremony at 4:00 pm · please arrive by 3:45 pm</p>
 
           <dl class="details">
             <dt>Where</dt>
@@ -73,11 +83,13 @@
 
         <!-- Event 2 -->
         <article class="event event--forest">
-          <p class="event__index">The second day</p>
+          <p class="event__index"><svg class="motif" viewBox="0 0 240 140" aria-hidden="true"><path fill="currentColor" d="M0,140 L60,40 L100,90 L140,30 L185,95 L240,45 L240,140 Z"/></svg>The second day</p>
           <h3 class="event__name">Kyukaruizawa Kikyo</h3>
-          <p class="event__theme">A celebration in nature — among the mountains, in the middle of the day.</p>
+          <!-- Add your own photo of the venue here later:
+          <div class="event__media"><img src="images/kikyo.jpg" alt="Kyukaruizawa Kikyo" /></div> -->
+          <p class="event__theme">A celebration out among the mountains, in the middle of the day.</p>
 
-          <p class="event__when"><strong>Saturday, 14 November 2026</strong><br />Ceremony at 12:00 pm</p>
+          <p class="event__when"><strong>Saturday, 14 November 2026</strong><br />Ceremony at 11:30 am · reception at 12:30 pm</p>
 
           <dl class="details">
             <dt>Where</dt>
@@ -105,7 +117,7 @@
       <p class="eyebrow">The shape of the weekend</p>
       <h2 class="section-title">A weekend at a glance</h2>
       <hr class="rule" />
-      <p class="lead">Here's the natural rhythm of things. Only the two ceremonies are fixed — everything else is a loose suggestion. Come early, stay late, and plan freely among yourselves; there will be plenty of unofficial gatherings on either side of both days.</p>
+      <p class="lead">Here's roughly how the days flow. Only the two ceremonies are fixed — everything else is a loose suggestion. Come early, stay late, and plan freely among yourselves; there will be plenty of unofficial gatherings on either side of both days.</p>
 
       <div class="timeline">
         <div class="tl-row tl-row--gold">
@@ -124,7 +136,7 @@
         <div class="tl-row tl-row--dusk">
           <div class="tl-when">
             <div class="tl-date">Nov 12</div>
-            <div class="tl-day">Thursday · 4:00 pm</div>
+            <div class="tl-day">Thursday · 4:00 pm (arrive by 3:45)</div>
             <span class="tl-place">Tokyo · Nogi-jinja</span>
           </div>
           <div class="tl-what">
@@ -149,7 +161,7 @@
         <div class="tl-row tl-row--forest">
           <div class="tl-when">
             <div class="tl-date">Nov 14</div>
-            <div class="tl-day">Saturday · 12:00 pm</div>
+            <div class="tl-day">Saturday · 11:30 am</div>
             <span class="tl-place">Karuizawa · Kikyo</span>
           </div>
           <div class="tl-what">
@@ -165,7 +177,7 @@
             <span class="tl-place">Wherever you like</span>
           </div>
           <div class="tl-what">
-            <h3>Keep the adventure going</h3>
+            <h3>Wherever you go next</h3>
             <p>Loop back to Tokyo, soak in an onsen, or push on to Nagano and beyond. A few ideas are further down the page.</p>
           </div>
         </div>
@@ -232,8 +244,8 @@
         <div>
           <h3 class="place-title">In Karuizawa <span class="tag">Our hotel picks</span></h3>
           <ul class="clean">
-            <li><b>Kyukaruizawa Kikyo, Curio Collection by Hilton</b><span class="note">The wedding venue itself — stay where it all happens, in Old Karuizawa. The loveliest, most effortless base for the day.</span></li>
-            <li><b>Le Grand Kyu Karuizawa</b><span class="note">A short walk from the venue in Old Karuizawa — a lovely, convenient spot right by the old main street.</span></li>
+            <li><b>Kyukaruizawa Kikyo, Curio Collection by Hilton</b><span class="note">The wedding venue itself — in Old Karuizawa, you wake up right where the day happens. The simplest base of all.</span></li>
+            <li><b>Le Grand Kyu Karuizawa</b><span class="note">A short walk from the venue in Old Karuizawa — right by the old main street.</span></li>
             <li><b>Karuizawa Prince Hotel (West)</b><span class="note">Very comfortable, set by the station and the outlet plaza; an easy, well-run choice.</span></li>
             <li><b>Hotel Indigo Karuizawa</b><span class="note">Another very comfortable stay, near the station — and worth a look if you hold a premium travel or IHG card for the perks.</span></li>
             <li><b>Holiday Inn Resort ANA Karuizawa by IHG</b><span class="note">Great value if you're using an IHG credit (e.g. the Chase IHG card). Note it's well out of town — best saved for <em>after</em> the wedding.</span></li>
@@ -243,7 +255,7 @@
 
       <div class="feature">
         <h3>Stay with us at Chacone Karuizawa</h3>
-        <p>We've taken over <b>Chacone Karuizawa</b>, a pension house, for the nights of the <b>13th and 14th</b> — and we'd love to have you there with us. We're offering it to our guests at a deeply discounted <b>¥5,000 (about $30) per person, per night</b>.</p>
+        <p>We've taken over <b>Chacone Karuizawa</b>, a pension house, for the nights of the <b>13th and 14th</b> — and we'd love to have you there with us. We're offering it to our guests at a heavily reduced <b>¥5,000 (about $30) per person, per night</b>.</p>
         <p>Spots are limited, so if you'd like to stay with us, <b>message Jacob directly</b> to reserve a place.</p>
       </div>
 
@@ -265,7 +277,7 @@
         <div>
           <h3 class="place-title">Worth your time</h3>
           <ul class="clean">
-            <li><b>Kyu-Karuizawa Ginza</b><span class="note">The old main street and the heart of it all — cafés, bakeries and shops, an easy stroll from the hotel.</span></li>
+            <li><b>Kyu-Karuizawa Ginza</b><span class="note">The old main street — cafés, bakeries and shops, an easy stroll from the hotel.</span></li>
             <li><b>Prince Shopping Plaza</b><span class="note">One of Japan's largest open-air outlet malls, set among the mountains and connected right to the station.</span></li>
             <li><b>Shiraito Falls</b><span class="note">A wide, delicate fan of spring-fed "white thread" cascades in the forest.</span></li>
             <li><b>Kumoba Pond</b><span class="note">A mirror-still pond with a gentle walking loop — the town's most photogenic corner.</span></li>
@@ -311,7 +323,7 @@
         <div class="card">
           <h3>Snow Monkeys</h3>
           <p class="how">~half day via Nagano</p>
-          <p>Wild macaques bathing in a steaming mountain hot spring at Jigokudani — unforgettable, if a bit of a journey.</p>
+          <p>Wild macaques bathing in a steaming mountain hot spring at Jigokudani — well worth the trek, if a bit of a journey.</p>
         </div>
         <div class="card">
           <h3>Takayama &amp; Shirakawa-go</h3>
@@ -325,7 +337,7 @@
         </div>
       </div>
 
-      <p class="callout">Feeling adventurous? <b>Renting a car</b> is a wonderful way to roam this part of the mountains at your own pace — onsen towns, valleys and viewpoints the trains don't reach.</p>
+      <p class="callout">Feeling adventurous? <b>Renting a car</b> is a great way to explore this part of the mountains at your own pace — onsen towns, valleys and viewpoints the trains don't reach.</p>
 
       <div class="feature">
         <h3>A note on gifts</h3>
@@ -345,7 +357,7 @@
   <!-- ============ FOOTER ============ -->
   <footer>
     <div class="wrap">
-      <hr class="rule center" />
+      <svg class="motif motif--divider center" viewBox="0 0 200 20" aria-hidden="true"><g stroke="currentColor" stroke-width="1" fill="none"><line x1="0" y1="10" x2="75" y2="10"/><line x1="125" y1="10" x2="200" y2="10"/></g><g fill="currentColor"><path d="M100,2 C103.5,6 103.5,14 100,18 C96.5,14 96.5,6 100,2 Z"/><path d="M100,10 C92,5 82,6 77,10 C82,15 92,15 100,10 Z"/><path d="M100,10 C108,5 118,6 123,10 C118,15 108,15 100,10 Z"/></g></svg>
       <p class="eyebrow plain" style="text-align:center;">We can't wait to celebrate with you</p>
       <h2 class="footer__names">Ayumi &amp; Jacob</h2>
       <p class="footer__note">Tokyo &amp; Karuizawa · November 2026</p>
