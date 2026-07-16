@@ -143,8 +143,9 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem); }
   padding: clamp(3.5rem, 9vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem);
   color: #fbf8f2; text-align: center;
   background:
-    linear-gradient(180deg, rgba(20,18,16,0.30), rgba(20,18,16,0.45)),
-    linear-gradient(110deg, #35304a 0%, #4a3f5a 40%, #6a5a58 60%, #5f7355 100%);
+    linear-gradient(180deg, rgba(26,22,20,0.55), rgba(26,22,20,0.72)),
+    linear-gradient(110deg, rgba(53,48,74,0.55) 0%, rgba(74,63,90,0.40) 45%, rgba(95,115,85,0.50) 100%),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Omoide_Yokocho_%2853147853560%29.jpg/1280px-Omoide_Yokocho_%2853147853560%29.jpg") center/cover no-repeat;
 }
 .page-hero .wrap { position: relative; z-index: 1; }
 .page-hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; }
@@ -330,6 +331,25 @@ footer {
 /* Optional slots for the couple's own venue photos */
 .event__media { margin: 0 0 1.25rem; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--rule); }
 .event__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Train motif (steam locomotive, echoing the Karuizawa invitation) */
+.motif--train { flex: 0 0 auto; height: auto; }
+.place-title .motif--train { width: 32px; align-self: center; color: var(--gold); margin-right: 0.15rem; transform: translateY(-1px); }
+
+/* Featured "menu" photo: one highlighted spot per section */
+.feature-shot { margin: 2.25rem 0 0; }
+.feature-shot img { width: 100%; height: clamp(230px, 33vw, 380px); object-fit: cover; display: block; border: 1px solid var(--rule); }
+.feature-shot figcaption { margin-top: 0.7rem; color: var(--ink-soft); font-size: 0.98rem; max-width: 64ch; }
+.feature-shot .fs-name { font-family: "Cormorant Garamond", serif; font-size: 1.2rem; color: var(--ink); margin-right: 0.45rem; }
+
+/* Small "related" image (Travel / Accommodation) */
+.spot-img { margin: 1.75rem 0 0; max-width: 440px; }
+.spot-img img { width: 100%; height: 240px; object-fit: cover; display: block; border: 1px solid var(--rule); }
+.spot-img figcaption { margin-top: 0.5rem; color: var(--ink-soft); font-size: 0.9rem; font-style: italic; }
+
+/* Photo credits line */
+.credits { margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-soft); opacity: 0.85; }
+.credits a { font-size: inherit; }
 
 /* ============ Responsive ============ */
 @media (max-width: 900px) {
