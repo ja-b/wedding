@@ -342,6 +342,12 @@ footer {
 .feature-shot figcaption { margin-top: 0.7rem; color: var(--ink-soft); font-size: 0.98rem; max-width: 64ch; }
 .feature-shot .fs-name { font-family: "Cormorant Garamond", serif; font-size: 1.2rem; color: var(--ink); margin-right: 0.45rem; }
 
+/* Lead paragraph beside a small image, fills the top-of-section whitespace */
+.lead-row { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.lead-row .lead { margin: 0; flex: 1 1 auto; min-width: 0; }
+.lead-row .spot-img { margin: 0; flex: 0 0 auto; }
+@media (max-width: 760px) { .lead-row { flex-direction: column; align-items: flex-start; gap: 1.25rem; } }
+
 /* Small "related" image (Travel / Accommodation) */
 .spot-img { margin: 1.75rem 0 0; max-width: 440px; }
 .spot-img img { width: 100%; height: 240px; object-fit: cover; display: block; border: 1px solid var(--rule); }
