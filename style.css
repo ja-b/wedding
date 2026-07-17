@@ -343,7 +343,7 @@ footer {
 .feature-shot .fs-name { font-family: "Cormorant Garamond", serif; font-size: 1.2rem; color: var(--ink); margin-right: 0.45rem; }
 
 /* Lead paragraph beside a small image, fills the top-of-section whitespace */
-.lead-row { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+.lead-row { display: flex; gap: clamp(1.5rem, 4vw, 3rem); align-items: flex-start; }
 .lead-row .lead { margin: 0; flex: 1 1 auto; min-width: 0; }
 .lead-row .spot-img { margin: 0; flex: 0 0 auto; }
 @media (max-width: 760px) { .lead-row { flex-direction: column; align-items: flex-start; gap: 1.25rem; } }
@@ -352,6 +352,10 @@ footer {
 .spot-img { margin: 1.75rem 0 0; max-width: 440px; }
 .spot-img img { width: 100%; height: 240px; object-fit: cover; display: block; border: 1px solid var(--rule); }
 .spot-img figcaption { margin-top: 0.5rem; color: var(--ink-soft); font-size: 0.9rem; font-style: italic; }
+
+/* In the spotlight card the photo goes full width, like a feature */
+.spotlight .spot-img { max-width: none; margin: 0 0 1.25rem; }
+.spotlight .spot-img img { height: clamp(240px, 30vw, 340px); }
 
 /* Photo credits line */
 .credits { margin-top: 1.5rem; font-size: 0.78rem; color: var(--ink-soft); opacity: 0.85; }
@@ -366,6 +370,7 @@ footer {
   .onward { grid-template-columns: 1fr; }
   .hero__panels { grid-template-columns: 1fr; grid-template-rows: 1.3fr 0.7fr; }
   .hero__panels::before { background: linear-gradient(180deg, transparent 44%, rgba(56,48,62,0.32) 52%, transparent 62%); }
+  .hero__meta { font-size: 1rem; gap: 0.45rem 1rem; }
   .tl-row { grid-template-columns: 1fr; gap: 0.5rem; }
   .tl-when { padding-bottom: 0.25rem; }
   .topbar { flex-wrap: wrap; gap: 0.3rem 1rem; }
